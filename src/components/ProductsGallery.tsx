@@ -1,5 +1,8 @@
 const SHOW_PRODUCTS_GALLERY = false;
 export const ProductsGallery = () => {
+  if (!SHOW_PRODUCTS_GALLERY) {
+  return null;
+}
   const products = [{
     id: 1,
     name: "Peruca Lace Front",
