@@ -1,3 +1,4 @@
+const SHOW_PRODUCTS_GALLERY = false;
 export const ProductsGallery = () => {
   const products = [{
     id: 1,
