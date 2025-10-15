@@ -5,7 +5,7 @@ export const TestimonialsSection = () => {
     {
       name: "Mariana Silva",
       role: "Ex-vendedora",
-      avatar: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&h=400&fit=crop",
+      avatar: "https://i.postimg.cc/W1PwLSyW/96512892-10158556354441289-5848622576607166464-n.jpg",
       text: "Em 2 meses já tinha feito mais de R$ 15 mil em vendas. Os fornecedores são reais e respondem rápido!",
       rating: 5,
     },
