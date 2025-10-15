@@ -2,10 +2,30 @@ import { useState, useEffect } from "react";
 import { Shield } from "lucide-react";
 
 export const CountdownSection = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    hours: 23,
-    minutes: 59,
-    seconds: 59,
+  // Change 24h pour 4h et utilise localStorage
+  const [timeLeft, setTimeLeft] = useState(() => {
+    // Vérifie s'il y a un compte à rebours en cours dans localStorage
+    const savedEndTime = localStorage.getItem('countdownEndTime');
+    
+    if (savedEndTime) {
+      const now = new Date().getTime();
+      const endTime = parseInt(savedEndTime);
+      const timeRemaining = endTime - now;
+      
+      if (timeRemaining > 0) {
+        // Continue le compte à rebours existant
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+        return { hours, minutes, seconds };
+      }
+    }
+    
+    // Nouveau compte à rebours de 4 heures
+    const fourHoursFromNow = new Date().getTime() + (4 * 60 * 60 * 1000);
+    localStorage.setItem('countdownEndTime', fourHoursFromNow.toString());
+    
+    return { hours: 3, minutes: 59, seconds: 59 };
   });
 
   useEffect(() => {
@@ -17,8 +37,12 @@ export const CountdownSection = () => {
           return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
         } else if (prev.hours > 0) {
           return { hours: prev.hours - 1, minutes: 59, seconds: 59 };
+        } else {
+          // Compte à rebours terminé
+          clearInterval(timer);
+          localStorage.removeItem('countdownEndTime');
+          return { hours: 0, minutes: 0, seconds: 0 };
         }
-        return prev;
       });
     }, 1000);
 
