@@ -63,7 +63,7 @@ export const HeroSection = () => {
           <div className="relative animate-slide-up">
             <div className="relative gold-border rounded-2xl overflow-hidden group">
               <img 
-                src="https://i.postimg.cc/zvYFxMmQ/ppp.webp" 
+                src="https://i.postimg.cc/MKMQhFJh/ppp.jpg" 
                 alt="Fornecedores de Perucas Premium"
                 className="w-full h-auto transition-transform duration-500 group-hover:scale-110"
               />
