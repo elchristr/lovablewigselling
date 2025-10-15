@@ -12,7 +12,7 @@ export const TestimonialsSection = () => {
     {
       name: "Juliana Costa",
       role: "Empreendedora",
-      avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=400&fit=crop",
+      avatar: "https://i.postimg.cc/4NPGC2LP/Whats-App-Image-2025-10-10-at-23-14-53-1cb5c544.jpg",
       text: "Consegui sair do meu emprego e hoje trabalho de casa vendendo perucas. Melhor investimento que já fiz!",
       rating: 5,
     },
