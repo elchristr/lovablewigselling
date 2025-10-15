@@ -19,7 +19,7 @@ export const TestimonialsSection = () => {
     {
       name: "Camila Rodrigues",
       role: "Revendedora",
-      avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&fit=crop",
+      avatar: "https://i.postimg.cc/NFGXdPPw/Gjc-Lobr-XEAA2-IYd.jpg",
       text: "Os fornecedores que conheci através do e-book me dão preços incríveis. Minha margem de lucro triplicou!",
       rating: 5,
     },
